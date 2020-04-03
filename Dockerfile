@@ -29,6 +29,7 @@ RUN git clone https://github.com/erdc/proteus && \
     git submodule update --init --recursive && \
     ./stack/hit/bin/hit init-home && \
     ./stack/hit/bin/hit remote add http://levant.hrwallingford.com/hashdist_src --objects="source" && \
+    ./stack/hit/bin/hit remote add http://levant.hrwallingford.com/hashdist_ubuntu_18_04 --objects="build" && \
     make stack stack/hit/bin/hit stack/default.yaml && \
     cd stack && \
     ./hit/bin/hit build -j 4 default.yaml -v && \
